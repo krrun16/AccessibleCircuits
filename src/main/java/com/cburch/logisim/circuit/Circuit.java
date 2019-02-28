@@ -30,46 +30,12 @@
 
 package com.cburch.logisim.circuit;
 
-import java.awt.Graphics;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.SortedSet;
-import java.util.Timer;
-import java.util.TimerTask;
-import java.util.TreeSet;
-import java.util.WeakHashMap;
-
-import javax.swing.JOptionPane;
-
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
 import com.bfh.logisim.designrulecheck.Netlist;
 import com.bfh.logisim.fpgagui.FPGAReport;
 import com.cburch.logisim.circuit.appear.CircuitAppearance;
 import com.cburch.logisim.comp.Component;
-import com.cburch.logisim.comp.ComponentDrawContext;
-import com.cburch.logisim.comp.ComponentEvent;
-import com.cburch.logisim.comp.ComponentFactory;
-import com.cburch.logisim.comp.ComponentListener;
-import com.cburch.logisim.comp.EndData;
-import com.cburch.logisim.data.Attribute;
-import com.cburch.logisim.data.AttributeEvent;
-import com.cburch.logisim.data.AttributeSet;
-import com.cburch.logisim.data.BitWidth;
-import com.cburch.logisim.data.Bounds;
-import com.cburch.logisim.data.FailException;
-import com.cburch.logisim.data.Location;
-import com.cburch.logisim.data.TestException;
-import com.cburch.logisim.data.Value;
+import com.cburch.logisim.comp.*;
+import com.cburch.logisim.data.*;
 import com.cburch.logisim.file.LogisimFile;
 import com.cburch.logisim.instance.Instance;
 import com.cburch.logisim.instance.InstanceState;
@@ -85,6 +51,14 @@ import com.cburch.logisim.tools.Strings;
 import com.cburch.logisim.util.AutoLabel;
 import com.cburch.logisim.util.CollectionUtil;
 import com.cburch.logisim.util.EventSourceWeakSupport;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import javax.swing.*;
+import java.awt.*;
+import java.util.List;
+import java.util.Timer;
+import java.util.*;
 
 public class Circuit {
 	private class EndChangedTransaction extends CircuitTransaction {

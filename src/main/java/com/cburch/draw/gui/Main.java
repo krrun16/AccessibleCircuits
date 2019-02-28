@@ -74,7 +74,7 @@ public class Main {
 		VerticalSplitPane all = new VerticalSplitPane(west, canvas, 0.3);
 
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().add(all, BorderLayout.CENTER);
+		frame.getContentPane().add(all, BorderLayout.NORTH);
 		frame.pack();
 		frame.setVisible(true);
 	}
