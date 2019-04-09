@@ -32,6 +32,7 @@ package com.cburch.logisim.gui.menu;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -143,10 +144,29 @@ public class LogisimMenuBar extends JMenuBar {
 		this.listener = new MyListener();
 		this.proj = proj;
 		this.enableListeners = new ArrayList<ChangeListener>();
-		add(file = new MenuFile(this));
-		add(edit = new MenuEdit(this));
-		add(project = new MenuProject(this));
-		add(simulate = new MenuSimulate(this));
+		//change here
+		//JMenu file;
+		//file = new JMenu("file");
+		file = new MenuFile(this);
+		file.setMnemonic(KeyEvent.VK_A);
+		file.getAccessibleContext().setAccessibleDescription(
+				"file");
+		add(file);
+		edit = new MenuEdit(this);
+		edit.setMnemonic(KeyEvent.VK_0);
+		edit.getAccessibleContext().setAccessibleDescription(
+				"edit");
+		add(edit);
+		project = new MenuProject(this);
+		project.setMnemonic(KeyEvent.VK_C);
+		project.getAccessibleContext().setAccessibleDescription(
+				"project");
+		add(project);
+		simulate = new MenuSimulate(this);
+		simulate.setMnemonic(KeyEvent.VK_2);
+		simulate.getAccessibleContext().setAccessibleDescription(
+				"simulate");
+		add(simulate);
 		add(fpga = new MenuFPGA(parent, this, proj));
 		add(new WindowMenu(parent));
 		add(help = new MenuHelp(this));

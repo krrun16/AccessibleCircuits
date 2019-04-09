@@ -71,6 +71,8 @@ class MenuFile extends Menu implements ActionListener {
 		int menuMask = getToolkit().getMenuShortcutKeyMask();
 
 		newi.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_N, menuMask));
+		newi.getAccessibleContext().setAccessibleDescription(
+				"new");
 		merge.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, menuMask));
 		open.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, menuMask));
 		close.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, menuMask

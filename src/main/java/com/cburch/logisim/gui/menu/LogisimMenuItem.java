@@ -30,7 +30,9 @@
 
 package com.cburch.logisim.gui.menu;
 
-public class LogisimMenuItem {
+import javax.swing.*;
+
+public class LogisimMenuItem extends JMenuItem {
 	private String name;
 
 	LogisimMenuItem(String name) {
