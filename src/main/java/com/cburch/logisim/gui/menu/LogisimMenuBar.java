@@ -167,7 +167,11 @@ public class LogisimMenuBar extends JMenuBar {
 		simulate.getAccessibleContext().setAccessibleDescription(
 				"simulate");
 		add(simulate);
-		add(fpga = new MenuFPGA(parent, this, proj));
+		fpga = new MenuFPGA(parent, this, proj);
+		fpga.setMnemonic(KeyEvent.VK_1);
+		fpga.getAccessibleContext().setAccessibleDescription(
+				"fpga");
+		add(fpga);
 		add(new WindowMenu(parent));
 		add(help = new MenuHelp(this));
 
