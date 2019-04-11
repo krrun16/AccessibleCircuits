@@ -148,9 +148,12 @@ public class LogisimMenuBar extends JMenuBar {
 		//JMenu file;
 		//file = new JMenu("file");
 		file = new MenuFile(this);
+		file.getAccessibleContext();
 		file.setMnemonic(KeyEvent.VK_A);
 		file.getAccessibleContext().setAccessibleDescription(
 				"file");
+		file.setToolTipText(
+				"Clicking this component causes XYZ to happen.");
 		add(file);
 		edit = new MenuEdit(this);
 		edit.setMnemonic(KeyEvent.VK_0);

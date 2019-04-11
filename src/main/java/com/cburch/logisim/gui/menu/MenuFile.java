@@ -74,14 +74,28 @@ class MenuFile extends Menu implements ActionListener {
 		newi.getAccessibleContext().setAccessibleDescription(
 				"new");
 		merge.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_M, menuMask));
+		merge.getAccessibleContext().setAccessibleDescription(
+				"merge");
 		open.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_O, menuMask));
+		open.getAccessibleContext().setAccessibleDescription(
+				"open");
 		close.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_W, menuMask
 				| InputEvent.SHIFT_MASK));
+		close.getAccessibleContext().setAccessibleDescription(
+				"close");
 		save.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, menuMask));
+		save.getAccessibleContext().setAccessibleDescription(
+				"save");
 		saveAs.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_S, menuMask
 				| InputEvent.SHIFT_MASK));
+		saveAs.getAccessibleContext().setAccessibleDescription(
+				"save as");
 		print.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_P, menuMask));
+		print.getAccessibleContext().setAccessibleDescription(
+				"print");
 		quit.setAccelerator(KeyStroke.getKeyStroke(KeyEvent.VK_Q, menuMask));
+		quit.getAccessibleContext().setAccessibleDescription(
+				"quit");
 
 		add(newi);
 		add(merge);
